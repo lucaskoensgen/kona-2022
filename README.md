@@ -27,7 +27,7 @@ The data that is published is:
 - core temperature [°C] (only for Kristian)
 - skin temperature [°C] (only for Kristian)
 
-The data from both athletes is stored in 2 separate .csv files ([Gustav](./gustav_iden_copyright_entalpi_as.csv), [Kristian](./kristian_blummenfelt_copyright_entalpi_as.csv)) that are identical in format (order of columns might differ):
+The data from both athletes is stored in 2 separate .csv files ([Gustav](./data/gustav_iden_copyright_entalpi_as.csv), [Kristian](./data/kristian_blummenfelt_copyright_entalpi_as.csv)) that are identical in format (order of columns might differ):
 ```csv
 datetime,latitude,longitude,speed,elevation,heartrate,cadence,core_temperature,skin_temperature,stride_length
 2022-10-08 21:27:33+00:00,19.63866636157036,-155.9970761463046,4.012,9.199999999999989,140.0,89.0,38.86000061035156,34.20000076293945,1.406
