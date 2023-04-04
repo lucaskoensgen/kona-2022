@@ -272,4 +272,3 @@ dependencies:
   - zstd=1.5.2=hbc0c0cd_6
   - pip:
       - tilemapbase==0.4.7
-prefix: /Users/lucask/opt/anaconda3/envs/kona_run_env
