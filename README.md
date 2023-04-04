@@ -1,18 +1,18 @@
 # Entalpi public dataset Kona 2022
 
-![Gustav and Kristian pondering on their data](entalpi-212.jpg)
+## Analysis description
+This analysis has been set up to show how I would compare performances using time gaps over distance travelled. The jupyter notebook file [analysis.ipynb](./analysis.ipynb) contains a workflow and full explaination showing how I did this, but you can also just view the main outputs of the analysis in the [figures](./figures/) folder. Custom functions used in the analysis have been written and stored in the [functions.py](./functions.py) file. 
 
-## About Entalpi
-After years of coaching top athletes to world class results and world records, we launched an ambition to make our state of the art training method and sports technology available for athletes all over the world. With [Entalpi](https://entalpi.com) our ambition is to break both personal and world records and to change the way athletes train. Welcome to a new era where training, technology and big data is combined in a new and unique way to push human limits to new heights!
+## Setting up the environment
+This analysis environment is best setup using conda. A key package used to visualize the geospatial data is Geopandas – its installation is highly sensitive, prone to breaking and doesn't work with pip. As such, it is best to install the provided conda environment and run the analysis from there. 
 
+```
+conda env create -f environment.yml
+```
 
 ## About the dataset
 This repository contains a dataset with data from Gustav Iden's and Kristian Blummenfelt's run on the 2022 Ironman world championship in Kona.
 All the data in this repository is published under the "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)" license. For more information about this license, read the full license [here](LICENSE) or more information about it [here](https://creativecommons.org/licenses/by-nc/4.0/).
-
-The dataset is made publicly available as we use it during the application process of hiring new team members for Entalpi. You can find our open positions [here](https://www.entalpi.com/careers).
-If you are not currently applying for a job at Entalpi (but if you are reading this, you probably should!) we still welcome you to explore and play around with the dataset and share the results (also with us if you find something interesting 🤓), but make sure that you adhere to the license referenced above.
-
 
 ## Description of the dataset
 This repository contains data from Gustav's and Kristian's run during the 2022 Ironman world championships.
@@ -36,23 +36,3 @@ datetime,latitude,longitude,speed,elevation,heartrate,cadence,core_temperature,s
 ...
 ```
 
-## Contact
-For information about Entalpi or this dataset, you can [contact us here](https://www.entalpi.com/contact-us).
-For information about working at Entalpi, please contact us at jobs@entalpi.com.
-
-
-## Technical documentation
-
-The `./scripts/` directory contains a `fit_to_csv.py` file that is used to convert the source .fit files to .csv files.
-
-To convert .fit files to .csv files, clone this repository, `cd` into it's directory and then run these commands in order:
-
-```shell
-cd scripts
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m fit_to_csv {fit_file_path} {csv_file_path}
-```
-
-Please note that this requires a recent version of Python installed on your computer.
